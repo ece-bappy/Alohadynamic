@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Auto-Fill</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      width: 250px;
+    }
+    h3 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #4CAF50;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .tilt-in-top-1{animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both}
+    @keyframes tilt-in-top-1{0%{transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+  </style>
+</head>
+<body class="tilt-in-top-1">
+  <h3>Student Fee Update</h3>
+  <div class="form-group">
+    <label for="totalAmount">Total Amount</label>
+    <input type="text" id="totalAmount">
+  </div>
+  <div class="form-group">
+    <label for="discountAmount">Discount Amount</label>
+    <input type="text" id="discountAmount">
+  </div>
+  <div class="form-group">
+    <label for="vatAmount">Vat Amount</label>
+    <input type="text" id="vatAmount">
+  </div>
+  <div class="form-group">
+    <label for="grandTotalAmount">Grand Total Amount</label>
+    <input type="text" id="grandTotalAmount">
+  </div>
+  <button id="findButton">Find and Update</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
